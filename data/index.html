@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js" type="text/javascript;version=1.8"></script>
+  </head>
+  <body>
+    <aside>
+      <figure id="webpage">
+        <i class="fa fa-2x fa-picture-o"></i>
+      </figure>
+
+      <button id="addon-export" disabled>
+        <i class="fa fa-3x fa-share-square-o"></i>
+        export
+      </button>
+    </aside>
+
+    <section>
+      <div id="addon-details">
+        <input type="text" id="txt-name" placeholder="Add-on Name">
+        <input type="text" id="txt-author" placeholder="Add-on Author's Name" >
+        <input type="text" id="txt-description" placeholder="Add-on Description" >
+      </div>
+      <div id="list">
+        <header>
+          <button id="btn-add-css">
+            <i class="fa fa-2x fa-plus"></i>
+            <i class="fa fa-2x fa-pause"></i>
+            <span>recording</span>
+          </button>
+
+        </header>
+        <div>
+          <ul>
+            <li id="list-template">
+              <i class="fa fa-eye"></i>
+              <div>
+                <h4>http://www.mozilla.org/en-US/</h4>
+                <input type="text" name="txt-css-description" placeholder="Modification Description"/>
+              </div>
+              <button name="btn-delete">
+                <i class="fa fa-trash-o"></i>
+                <label>Delete</label>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,284 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #fefefe;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  norder
+}
+
+body {
+  font: 14px "Lucida Grande";
+  display: flex;
+  align-items: stretch;
+}
+
+aside {
+  background: #252c33;
+  width: 96px;
+  height: 100%;
+  display: block;
+  border-right: 1px solid #121212;
+  box-shadow: inset -2px 0px 0 0px #21272d;
+  color: #8797a4;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em 0;
+}
+
+figure {
+  border: 3px dashed #cbd5dc;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10%;
+  color: #cbd5dc;
+}
+
+#webpage {
+  border: 3px dashed #8797a4;
+  color: #8797a4;
+  width: 64px;
+  height: 64px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10%;
+}
+
+#webpage.has-icon {
+  border: 0;
+}
+
+#webpage.has-icon i {
+  visibility: hidden;
+}
+
+section {
+  width: 100%;
+  display: flex;
+}
+
+li {
+  list-style: none;
+  border-bottom: 1px solid #e0e7ec;
+  min-height: 64px;
+  position: relative;
+  display: flex;
+  cursor: default;
+  align-items: center;
+  justify-content: stretch;
+}
+
+li > div {
+  width: 100%;
+}
+
+li > i {
+  color: #8797a4;
+  margin: 10px;
+}
+
+li > button {
+  border: 0;
+  background: transparent;
+  font-size: 14px;
+  color: #8797a4;
+}
+
+button {
+  -moz-user-select: -moz-none;
+}
+
+#btn-add-css {
+  background: #5cb85c;
+  color: #fefefe;
+  border: 0;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  transition: width, background 1s, 0.2s;
+  position: relative;
+}
+
+#btn-add-css i{
+  position: absolute;
+  left: 15px;
+  top: 13px;
+}
+
+#btn-add-css span,
+#btn-add-css i.fa-pause {
+  display: none;
+}
+
+#btn-add-css.recording {
+  background: #d9534f;
+  color: #fefefe;
+  border: 0;
+  cursor: pointer;
+  width: 104px;
+}
+
+#btn-add-css.recording i.fa-pause {
+  display: inline-block;
+}
+#btn-add-css.recording i.fa-plus {
+  display: none;
+}
+#btn-add-css.recording span {
+  margin-left: 32px;
+  display: inline-block;
+  animation: pulse 1s ease-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 1.0;
+  }
+  to {
+    opacity: 0.0;
+  }
+}
+
+li#list-template {
+  display: none;
+}
+
+li h4, li p {
+  margin: 0
+}
+
+li h4 {
+  color: #8797a4;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  width: 100%;
+}
+
+section input[type=text] {
+  border: 0;
+}
+
+section input[type=text]::-moz-placeholder {
+  opacity: 1;
+}
+
+section input[type=text]:focus::-moz-placeholder {
+  opacity: 0.5;
+}
+
+#txt-name:focus,
+#txt-name:hover {
+  aborder: 4px dashed rgba(0, 0, 0, 0.5);
+  amargin: 0 0 8px 0;
+}
+
+#txt-name {
+  font-family: ff-tisa-web-pro;
+  font-weight: bold;
+  font-size: 22px;
+  background: transparent;
+  display: block;
+  width: 100%;
+}
+
+#txt-author {
+  font-family: ff-tisa-web-pro;
+  font-size: 14px;
+  background: transparent;
+  margin: 0;
+  display: block;
+  width: 100%;
+}
+
+#txt-description {
+  font-family: ff-tisa-web-pro;
+  font-size: 14px;
+  background: transparent;
+  margin: 0;
+  display: block;
+  width: 100%;
+}
+
+#list header {
+  position: absolute;
+  top: 20px;
+}
+
+#list {
+  padding: 1em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 64px;
+}
+
+#list > div {
+  overflow: auto;
+}
+
+#addon-details {
+  padding: 1em;
+  width: 400px;
+  background: #e9eaeb;
+  box-shadow: 1px 0 2px silver;
+}
+
+#addon-export {
+  color: #8797a4;
+  margin-top: 2em;
+  border: 0;
+  background: transparent;
+}
+
+#addon-export:active:not([disabled]) {
+  color: #55acee;
+}
+
+#addon-export[disabled] {
+  opacity: 0.5;
+}
+
+#addon-export i {
+  display: block;
+}
+
+button[name=btn-delete] {
+  height: 64px;
+  transition: background-color, width 0.5s, 0.5s;
+  width: 32px;
+  cursor: pointer;
+}
+button[name=btn-delete] > i {
+  display: inline-block;
+}
+button[name=btn-delete] > label {
+  display: none;
+}
+button[name=btn-delete].confirm {
+  height: 64px;
+  background: #d9534f;
+  width: 100px;
+}
+button[name=btn-delete].confirm > i {
+  display: none;
+}
+button[name=btn-delete].confirm > label {
+  display: inline-block;
+  color: #fefefe;
+}
